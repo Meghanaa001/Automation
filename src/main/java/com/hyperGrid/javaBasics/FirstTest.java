@@ -5,10 +5,16 @@ public class FirstTest {
     int id = 10;
     String name = "Siva";
 
+    /**
+     * login function, enter username and password
+     */
     public void login(){
         System.out.println("Enter - UserName and Password");
     }
 
+    /**
+     * loginWithAdmin
+     */
     public void loginWithAdmin(){
         System.out.println("Enter - UserName and Password");
     }
