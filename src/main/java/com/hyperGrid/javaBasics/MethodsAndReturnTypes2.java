@@ -3,11 +3,12 @@ package com.hyperGrid.javaBasics;
 public class MethodsAndReturnTypes2 {
 
     public void sum(){
-        int a = 10; // int a=10, b=10, c;
-        int b = 10;
+        int a = 4745745; // int a=10, b=10, c;
+        int b = 456657;
         int c;
         c = a+b;
         System.out.println("a + b :: " + c);
+        //return;
     }
 
     public int total(){
