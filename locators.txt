@@ -6,3 +6,58 @@ linkText
 partialLinKText
 cssSelector
 xpath
+Selenium-4:
+relative-locators-
+
+Xpath:
+Absolute - /html/body/form/div/label : don't use this
+Relative - //input[@type='password']
+
+//tagName[@attribute='value']
+//input[@name='UserFirstName']
+//span[text()='Enter your first name']
+//label[contains(text(),'First name')]
+
+
+functions in X-Path:
+contains():
+//label[contains(text(),'First name')]
+//input[contains(@id,'UserFirstName')]
+
+starts-with():
+//input[starts-with(@id,'UserFirstName')]
+//span[starts-with(text(),'Enter your first name')]
+
+ends-with(): not working in current version od xpath
+text():
+//span[text()='Enter your first name']
+
+normalize-space():
+//label[normalize-space()='First name']
+//label[normalize-space(text())='First name']
+
+length()
+count()
+last()
+position()
+
+cssSelector:
+html>body>form>div>label
+input[name='UserFirstName']
+[name='UserFirstName']
+
+css with id: #user-name
+css with class: .form_group
+
+functions in cssSelector:
+
+contains():
+input[id*='UserFirstName']
+
+start-with()
+input[id^='UserFirst']
+
+ends-with():
+input[aria-describedby$='errMsg']
+
+
