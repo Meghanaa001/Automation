@@ -1,0 +1,20 @@
+Step1: Create a folder and add file
+Step2: Create repo on github.com
+Step3: Open folder and open gitbash
+Ste4: git init
+Step5: git status
+Step6: git add file1 file2 file3
+Step7: git commit -m "message test case"
+Step8: git push origin main
+Step9: craete a branch at github
+STep10: git pull
+Step11: git chekcout branchname
+Step12: add file
+Step13: git add file
+Step14: git commit -m "message test case"
+Step15: git push
+
+Step16: Create a folder
+Step17: opne gitbash at new folder
+Step18: git clone github url
+
