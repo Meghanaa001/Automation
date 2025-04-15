@@ -60,4 +60,20 @@ input[id^='UserFirst']
 ends-with():
 input[aria-describedby$='errMsg']
 
+Axes in Xpath:
+Parent :: //div[text()='MOTOROLA']/parent::label/input
+          //div[text()='MOTOROLA']/../input
+Child :: //div[@title="Google"]/child::div
+         //div[@title="Google"]/div
+Ancestor :: //b[text()='Username']/ancestor::div[@id='loginPanel']
+Grand Child: descendant :: //div[@title='Google']/descendant::input
+Siblings:
+following-sibling :: //label[starts-with(@for,'UserFirstName')]/following-sibling::span
+preceding-sibling :: (//div[text()='Google']/preceding-sibling::input)[1]
+self
+descendant-or-self
+ancestor-or-self
+
+
+
 
