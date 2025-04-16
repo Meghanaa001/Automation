@@ -1,5 +1,7 @@
 package com.hyperGrid.javaBasics;
 
+import org.testng.annotations.Test;
+
 public class FirstTest {
 
     int id = 10;
@@ -34,5 +36,10 @@ public class FirstTest {
         System.out.println(firstTest.id);
 
         register();
+    }
+
+    @Test
+    public void firstTestCase(){
+        System.out.println("Test");
     }
 }
