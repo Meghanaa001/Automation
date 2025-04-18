@@ -9,19 +9,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ImplementSeleniumWithTestNG {
+public class ImplementSeleniumWithTestNG extends HyperGridBase{
 
-    WebDriver driver;
-
-    @BeforeSuite
-    public void launchBrowser(){
-        driver = new ChromeDriver();
-    }
-
-    @BeforeTest
-    public void launchApplication(){
-        driver.get("https://www.saucedemo.com/");
-    }
 
     @Test
     public void loginAsUser(){
@@ -37,8 +26,4 @@ public class ImplementSeleniumWithTestNG {
         loginButton.click();
     }
 
-    @AfterSuite
-    public void killSession(){
-        driver.quit();
-    }
 }
