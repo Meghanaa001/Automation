@@ -15,7 +15,8 @@ public class LoginDemo {
         webDriver.manage().window().maximize();
         webDriver.navigate().to("https://www.saucedemo.com/");
 
-        WebElement usernameInputBox = webDriver.findElement(By.name("user-name"));
+
+        WebElement usernameInputBox = webDriver.findElement(By.name("user-nam"));
         usernameInputBox.clear();
         usernameInputBox.sendKeys("standard_user");
 
@@ -27,15 +28,15 @@ public class LoginDemo {
         loginButton.click();
     }
 
-    public WebDriver getDriver(){
+    public WebDriver getDriver() {
         return webDriver;
     }
 
-    public WebElement getUserNameInputBox(){
+    public WebElement getUserNameInputBox() {
         return webDriver.findElement(By.id("user-name"));
     }
 
-    public String getName(){
+    public String getName() {
         return "Siva";
     }
 }
