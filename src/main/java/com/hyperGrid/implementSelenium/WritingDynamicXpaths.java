@@ -15,10 +15,13 @@ public class WritingDynamicXpaths {
         String brand = "Pre-Order";
         WebElement checkBox = driver.findElement(By.xpath("(//label[text()='"+brand+"'])[2]/preceding-sibling::input"));
         JavascriptExecutor jse = (JavascriptExecutor)driver;
+
         try {
             checkBox.click();
         }catch (ElementClickInterceptedException ec){
             jse.executeScript("arguments[0].click()", checkBox);
+        }catch (NoSuchElementException nse){
+            throw new NoSuchElementException("Element not found");
         }
     }
 }
