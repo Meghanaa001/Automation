@@ -1,13 +1,11 @@
 package com.hyperGrid.collectionFramework;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class CollectionTest {
 
     public static void main(String[] args) {
-        List collection = new ArrayList();
+        Collection collection = new HashSet();
         collection.add("Selenium");
         collection.add(4.31);
         collection.add(true);
