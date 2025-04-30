@@ -1,5 +1,6 @@
 package com.hyperGrid.collectionFramework;
 
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,13 +26,22 @@ public class MiscList {
         System.out.println(autoTools);
 
         //Collections.addAll(tools, automationTools);
-        // tools.addAll(autoTools); mistake
+        //tools.addAll(autoTools); //mistake
 
         Collections.sort(tools);
         System.out.println(tools);
 
+        List<String> list2 = new ArrayList<>();
+        list2.add("A");
+        list2.add("B");
 
+        List<String> list3 = new ArrayList<>();
+        list3.add("C");
+        list3.add("D");
 
+        list2.addAll(list3);
+        System.out.println();
 
+        System.out.println("Combined List: " + list2);
     }
 }
