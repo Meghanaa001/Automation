@@ -31,4 +31,24 @@ public class VerifyTextAndAttribute {
         Assert.assertTrue(isHeadingDisplayed);
 
     }
+
+    @Test
+    public void verifyAttributeOfWebElement(){
+        driver = new ChromeDriver();
+        driver.get("https://www.saucedemo.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+        WebElement userNameInputBox = driver.findElement(By.cssSelector("[placeholder='Username']"));
+        userNameInputBox.sendKeys("performance_glitch_user");
+
+        String userNameInputBoxValue = userNameInputBox.getDomProperty("value");
+        String userNameInputBoxValue1 = userNameInputBox.getDomAttribute("value");
+        String userNameInputBoxValue2 = userNameInputBox.getAttribute("value");
+
+        System.out.println(userNameInputBoxValue);
+        System.out.println(userNameInputBoxValue1);
+        System.out.println(userNameInputBoxValue2);
+
+        driver.quit();
+    }
 }
