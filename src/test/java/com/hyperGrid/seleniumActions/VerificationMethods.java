@@ -1,4 +1,4 @@
-package SeleniumExamples;
+package com.hyperGrid.seleniumActions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

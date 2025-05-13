@@ -40,6 +40,8 @@ public class ArrayListTest {
         list1.add("Playwright");
         list1.add("Selenium");
 
+        System.out.println(list1.indexOf("Automation"));
+
         for (String str: list1){
             System.out.print(str);
         }System.out.println();
@@ -58,6 +60,10 @@ public class ArrayListTest {
         System.out.println(list1);
 
         System.out.println(list1.get(1).equals("Appium"));
+
+        System.out.println("**********************");
+        List<String> test = new ArrayList<>();
+        System.out.println(test);
 
 
 

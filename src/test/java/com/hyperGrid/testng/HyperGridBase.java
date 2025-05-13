@@ -6,7 +6,7 @@ import org.testng.annotations.*;
 
 public class HyperGridBase {
 
-    WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeSuite
     public void launchBrowser(){

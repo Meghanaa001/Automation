@@ -7,12 +7,16 @@
             <run>
 <!--                <include name="regression"/>-->
 <!--                <include name="smoke"/>-->
-<!--                <exclude name="login"></exclude>-->
+                <exclude name="newFeature"></exclude>
                 <include name="login"/>
             </run>
         </groups>
         <classes>
-            <class name="com.hyperGrid.testng.GroupsTests"></class>
+            <class name="com.hyperGrid.testng.GroupsTests">
+                <methods>
+                    <exclude name="registerUser"></exclude>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

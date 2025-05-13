@@ -20,7 +20,7 @@ public class GroupsTests {
         System.out.println("register");
     }
 
-    @Test(groups = {"regression","smoke"})
+    @Test(groups = {"regression","smoke", "newFeature"})
     public void selectSeats(){
         System.out.println("selectSeats");
     }
