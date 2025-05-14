@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
+import java.time.Duration;
+
 public class HyperGridBase {
 
     protected WebDriver driver;
@@ -11,6 +13,8 @@ public class HyperGridBase {
     @BeforeSuite
     public void launchBrowser(){
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @Parameters("url")
