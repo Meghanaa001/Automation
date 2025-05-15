@@ -5,3 +5,7 @@
 3. rg.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
 
 4. org.openqa.selenium.NoSuchFrameException: No frame element found by name or id frame-left
+
+5. org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input type="checkbox" name="mz_fss" value="8" id="mz-fss-0-8" class="custom-control-input"> is not clickable at point (148, 606). Other element would receive the click: <label for="mz-fss-0-8" class="custom-control-label">...</label>
+
+6. org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'setAttribute' on 'Element': 2 arguments required, but only 1 present.

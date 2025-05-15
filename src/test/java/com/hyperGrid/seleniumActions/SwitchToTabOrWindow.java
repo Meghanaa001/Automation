@@ -1,7 +1,9 @@
 package com.hyperGrid.seleniumActions;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -34,4 +36,21 @@ public class SwitchToTabOrWindow {
 
         driver.findElement(By.name("email")).sendKeys("siva@yopmail.com");
     }
-}
+
+    @Test
+    public void isElementSelected4() {
+        driver = new ChromeDriver();
+        driver.get("https://cogmento.com/en");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        String parentWindow = driver.getWindowHandle();
+
+        System.out.println(parentWindow);
+        System.out.println("*************************************");
+        WebElement loginButton = driver.findElement(By.xpath("//a[text()='Login']"));
+        jse.executeScript("arguments[0].setAttribute('target','_self')", loginButton);
+
+        loginButton.click();
+    }
+    }

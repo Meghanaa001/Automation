@@ -16,7 +16,7 @@ public class AboutCasting {
 
 
     public static void main(String[] args) {
-        A a = new B();
+        A a = (A)new B();
         B b = (B)a;
     }
 }
