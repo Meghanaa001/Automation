@@ -50,7 +50,4 @@ public class MouseActions extends HyperGridBase {
         actions.pause(Duration.ofSeconds(2));
         actions.moveToElement(bBox).perform();
     }
-
-
-
 }
