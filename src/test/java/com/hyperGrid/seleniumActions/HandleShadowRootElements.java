@@ -7,6 +7,8 @@ import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class HandleShadowRootElements extends HyperGridBase {
 
     @Test
@@ -14,14 +16,15 @@ public class HandleShadowRootElements extends HyperGridBase {
         driver.get("https://www.salesforce.com/in/?ir=1");
 
         SearchContext rootElement = driver.findElement(By.cssSelector("hgf-c360nav[origin*='sfdcdigital']")).getShadowRoot();
-        rootElement.findElement(By.cssSelector("[data-tracking-type='cta-utility']")).click();
+        SearchContext rootElement1 = rootElement.findElement(By.cssSelector("[data-tracking-type=\"cta-utility\"]")).getShadowRoot();
+        WebElement button = rootElement1.findElement(By.cssSelector(".hgf-button"));
 
-        /*try{
-            tryForFreeElement.click();
+        try{
+            rootElement1.findElement(By.cssSelector("[data-tracking-type='cta-utility']")).click();
         }catch (Exception e) {
             JavascriptExecutor jse = (JavascriptExecutor) driver;
-            jse.executeScript("arguments[0].click()", tryForFreeElement);
-        }*/
+            jse.executeScript("arguments[0].click()", button);
+        }
     }
 
     @Test
@@ -30,5 +33,18 @@ public class HandleShadowRootElements extends HyperGridBase {
 
         SearchContext rootElement = driver.findElement(By.cssSelector("[apptitle=\"BOOKS\"]")).getShadowRoot();
         rootElement.findElement(By.cssSelector("#input")).sendKeys("Selenium");
+    }
+
+    @Test
+    public void salesForceTest(){
+        driver.get("https://www.salesforce.com/in/?ir=1");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+        WebElement mainRootElement = driver.findElement(By.cssSelector("hgf-c360nav[origin*='sfdcdigital']"));
+
+        SearchContext mainShadowElement = mainRootElement.getShadowRoot();
+        System.out.println("mainShadowElement :: " + mainShadowElement.toString());
+
+        mainShadowElement.findElement(By.cssSelector("[data-tracking-type='cta-utility']")).click();
     }
 }

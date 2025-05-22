@@ -9,3 +9,5 @@
 5. org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input type="checkbox" name="mz_fss" value="8" id="mz-fss-0-8" class="custom-control-input"> is not clickable at point (148, 606). Other element would receive the click: <label for="mz-fss-0-8" class="custom-control-label">...</label>
 
 6. org.openqa.selenium.JavascriptException: javascript error: Failed to execute 'setAttribute' on 'Element': 2 arguments required, but only 1 present.
+
+7. org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: user-nam (tried for 10 second(s) with 500 milliseconds interval)
