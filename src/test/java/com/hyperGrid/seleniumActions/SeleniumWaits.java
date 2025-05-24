@@ -1,11 +1,14 @@
 package com.hyperGrid.seleniumActions;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -46,8 +49,21 @@ public class SeleniumWaits {
     public void aboutWebDriverWait(){
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-nam"))).sendKeys("Test");
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name"))).sendKeys("Test");
+        boolean isTitlePresent = webDriverWait.until(ExpectedConditions.titleIs("Swag Labs"));
+        Assert.assertTrue(isTitlePresent);
         //WebElement userNameInputBox = driver.findElement(By.id("user-name"));
         WebElement passwordInputBox = driver.findElement(By.id("password"));
+    }
+
+    @Test
+    public void aboutFluentWait(){
+        FluentWait fluentWait = new FluentWait(driver);
+        fluentWait.withMessage("Please provide right locator");
+        fluentWait.pollingEvery(Duration.ofSeconds(5));
+        fluentWait.withTimeout(Duration.ofSeconds(15));
+        fluentWait.ignoring(NoSuchElementException.class);
+
+        fluentWait.until(ExpectedConditions.presenceOfElementLocated(By.id("user-nam")));
     }
 }
