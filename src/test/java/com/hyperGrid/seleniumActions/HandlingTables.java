@@ -18,8 +18,8 @@ public class HandlingTables extends HyperGridBase {
 
     //table[@id="table1"]/tbody/tr/td[1]
     //table[@id='table1']/thead/tr/th/span[text()='Email']/ancestor::table/tbody/tr/td[3]
-    String name = "Smith";
-    String column = "Email";
+    String name = "Bach";
+    String column = "Web Site";
 
     @Test
     public void getSpecificRowData(){
@@ -59,5 +59,16 @@ public class HandlingTables extends HyperGridBase {
         System.out.println(columnRecords);
     }
 
+    @Test
+    public void editSpecificData(){
+        driver.get("https://the-internet.herokuapp.com/tables");
+
+        WebElement recordEditButton = driver.findElement(By.xpath("//table[@id='table1']/descendant::td[text()='"+name+"']/following-sibling::td/a[@href='#edit']"));
+
+        recordEditButton.click();
+
+        System.out.println(driver.getCurrentUrl());
+        Assert.assertTrue(driver.getCurrentUrl().contains("edit"));
+    }
 
 }
