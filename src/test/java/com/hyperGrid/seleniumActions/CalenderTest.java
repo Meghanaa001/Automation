@@ -1,10 +1,12 @@
 package com.hyperGrid.seleniumActions;
 
 import com.hyperGrid.testng.HyperGridBase;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
 
@@ -46,6 +48,43 @@ public class CalenderTest extends HyperGridBase {
 
         System.out.println();
 
+    }
+
+    @Test
+    public void calenderSample() throws InterruptedException, AWTException {
+        driver.get("https://testautomationpractice.blogspot.com/");
+        WebElement calenderStartDate = driver.findElement(By.cssSelector("#start-date"));
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].scrollIntoView(true)",calenderStartDate);
+
+        calenderStartDate.click();
+
+        Robot robot = new Robot();
+
+        Thread.sleep(2000);
+        robot.keyPress(KeyEvent.VK_TAB);
+        Thread.sleep(2000);
+        robot.keyRelease(KeyEvent.VK_TAB);
+        Thread.sleep(2000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        Thread.sleep(2000);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+
+
+
+//        jse.executeScript("arguments[0].click()", calenderStartDate);
+
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(calenderStartDate).click().perform();
+
+//        Dimension dimension = calenderStartDate.getSize();
+//        System.out.println(dimension);
+//        int x = (int) (dimension.getWidth() * 0.95);
+//        int y = dimension.getHeight()/2;
+//        actions.moveToElement(calenderStartDate).click().perform();
+
+        System.out.println();
     }
 
 }
