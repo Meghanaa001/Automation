@@ -1,4 +1,4 @@
-package com.hyperGrid.seleniumActions;
+package com.hyperGrid.seleniumExamples;
 
 import com.hyperGrid.testng.HyperGridBase;
 import org.openqa.selenium.By;

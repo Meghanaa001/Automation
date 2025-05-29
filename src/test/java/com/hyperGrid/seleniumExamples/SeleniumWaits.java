@@ -1,4 +1,4 @@
-package com.hyperGrid.seleniumActions;
+package com.hyperGrid.seleniumExamples;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

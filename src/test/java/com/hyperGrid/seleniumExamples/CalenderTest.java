@@ -1,14 +1,12 @@
-package com.hyperGrid.seleniumActions;
+package com.hyperGrid.seleniumExamples;
 
 import com.hyperGrid.testng.HyperGridBase;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
-import java.util.List;
 
 public class CalenderTest extends HyperGridBase {
 

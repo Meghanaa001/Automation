@@ -1,4 +1,4 @@
-package com.hyperGrid.seleniumActions;
+package com.hyperGrid.seleniumExamples;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -35,6 +35,9 @@ public class SwitchToTabOrWindow {
         }
 
         driver.findElement(By.name("email")).sendKeys("siva@yopmail.com");
+        driver.close();
+        driver.switchTo().window(parentWindow);
+        System.out.println();
     }
 
     @Test

@@ -1,4 +1,4 @@
-package com.hyperGrid.seleniumActions;
+package com.hyperGrid.seleniumExamples;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

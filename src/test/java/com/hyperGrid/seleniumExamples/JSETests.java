@@ -1,11 +1,8 @@
-package com.hyperGrid.seleniumActions;
+package com.hyperGrid.seleniumExamples;
 
 import com.hyperGrid.testng.HyperGridBase;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class JSETests extends HyperGridBase {
 
