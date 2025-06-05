@@ -42,7 +42,8 @@ public class WritingCustomActions {
     public void login(){
         typeValue(By.id("user-name"), "standard_user");
         typeValue(By.id("password"), "secret_sauce");
-        clickOnWebElement(By.id("login-button"));
+        By loginButton = By.id("login-button");
+        clickOnWebElement(loginButton);
         String productsPageHeading = getTextWebElement(By.cssSelector(".title"));
         Assert.assertEquals(productsPageHeading, "Products", "Both values are not same");
     }
