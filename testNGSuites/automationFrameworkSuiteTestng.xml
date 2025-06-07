@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="browserName" value="firefox"/>
+    <test verbose="2" preserve-order="true" name="SmokeTest">
+        <parameter name="appUrl" value="https://www.saucedemo.com/"/>
+        <classes>
+            <class name="com.hyperGrid.automationFramework.LoginTest">
+            </class>
+        </classes>
+    </test>
+</suite>
