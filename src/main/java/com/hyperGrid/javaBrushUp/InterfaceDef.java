@@ -2,7 +2,7 @@ package com.hyperGrid.javaBrushUp;
 
 public interface InterfaceDef {
 
-    void bookTicket();
+    public abstract void bookTicket();
     void payment();
 
 }
