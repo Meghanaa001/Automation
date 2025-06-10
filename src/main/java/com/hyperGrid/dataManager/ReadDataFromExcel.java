@@ -44,9 +44,5 @@ public class ReadDataFromExcel {
 
         String visualUser = sheet.getRow(rowNumber).getCell(columnNumber).toString();
         System.out.println(visualUser);
-
-
-
-
     }
 }
