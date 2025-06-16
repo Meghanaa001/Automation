@@ -1,0 +1,15 @@
+Allure report:
+https://scoop.sh/
+1. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+2. Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
+Install scoop
+scoop install allure
+Add dependency
+allure server
+
+ChainTest report:
+add dependency
+add properties file
+
+

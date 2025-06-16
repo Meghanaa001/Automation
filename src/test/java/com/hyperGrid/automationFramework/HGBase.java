@@ -1,5 +1,7 @@
 package com.hyperGrid.automationFramework;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
+import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -11,6 +13,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -65,9 +68,14 @@ public class HGBase {
     }
 
     @AfterMethod
-    public void captureScreenshot(ITestResult iTestResult, Method mothod) {
+    public void captureScreenshot(ITestResult iTestResult, Method method) {
         if (iTestResult.getStatus() == ITestResult.FAILURE){
-            getScreenshot(mothod);
+            //getScreenshot(mothod);
+
+            ChainTestListener.embed(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png");
+            Allure.addAttachment(method.getName(), new ByteArrayInputStream(
+                    ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)
+            ));
         }
     }
 
