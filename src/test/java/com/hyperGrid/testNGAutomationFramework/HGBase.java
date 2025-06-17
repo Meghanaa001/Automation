@@ -1,4 +1,4 @@
-package com.hyperGrid.automationFramework;
+package com.hyperGrid.testNGAutomationFramework;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
 import io.qameta.allure.Allure;

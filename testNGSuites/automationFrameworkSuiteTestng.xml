@@ -5,7 +5,7 @@
     <test verbose="2" preserve-order="true" name="SmokeTest">
         <parameter name="appUrl" value="https://www.saucedemo.com/"/>
         <classes>
-            <class name="com.hyperGrid.automationFramework.LoginTest">
+            <class name="com.hyperGrid.testNGAutomationFramework.LoginTest">
             </class>
         </classes>
     </test>
